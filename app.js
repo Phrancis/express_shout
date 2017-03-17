@@ -10,6 +10,7 @@ const session = require("express-session")
 const index = require("./routes/index")
 const users = require("./routes/users")
 const register = require("./routes/register")
+const login = require("./routes/login")
 const messages = require("./lib/messages")
 
 const app = express()
@@ -32,6 +33,9 @@ app.use("/", index)
 app.use("/users", users)
 app.get("/register", register.form)
 app.post("/register", register.submit)
+app.get("/login", login.form)
+app.post("/login", login.submit)
+app.get("/logout", login.logout)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
