@@ -1,3 +1,4 @@
+"use strict"
 const express = require("express")
 const path = require("path")
 const favicon = require("serve-favicon")
@@ -26,7 +27,6 @@ app.use(express.static(path.join(__dirname, "public")))
 app.use("/", index)
 app.use("/users", users)
 app.get("/register", register.form)
-//noinspection JSUnresolvedFunction
 app.post("/register", register.submit)
 
 // catch 404 and forward to error handler
