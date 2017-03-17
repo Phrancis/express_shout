@@ -1,6 +1,6 @@
-# express_shout
+# express_shoutbox
 
-A "shout box" type of application that primarily demonstrates the handling of user login/authentication, and other user-centered functionality.
+A [shoutbox](https://en.wikipedia.org/wiki/Shoutbox) type of application that primarily demonstrates the handling of user login/authentication, and other user-centered functionality.
 
 Adapted from [Node.js in Action](https://www.manning.com/books/node-js-in-action), Chapter 9 "Advanced Express".
 
