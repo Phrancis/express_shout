@@ -6,14 +6,13 @@ exports.form = function(req, res) {
 }
 
 exports.submit = function(req, res, next) {
-  console.log(req.body)
   const data = req.body.user
-  console.log(data)
   // check if user name is unique
   User.getByName(data.name, function(err, user) {
     // defer DB connection and other errors
     if (err) return next(err)
     // Redis will default it
+    // TODO "username already taken" check doesn't work, creating duplicate users into Redis is possible
     if(user.id) {
       res.error("Username already taken!")
       res.redirect("back")

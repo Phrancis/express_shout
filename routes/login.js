@@ -20,6 +20,7 @@ exports.submit = function(req, res, next) {
       // redirect to entry listing
       res.redirect("/")
     } else {
+      // TODO after manually testing, the login always returns "Sorry! Invalid credentials." even with valid credentials
       // expose an error message
       res.error("Sorry! Invalid credentials.")
       // redirect back to login form
