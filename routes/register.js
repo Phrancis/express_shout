@@ -6,7 +6,9 @@ exports.form = function(req, res) {
 }
 
 exports.submit = function(req, res, next) {
+  console.log(req.body)
   const data = req.body.user
+  console.log(data)
   // check if user name is unique
   User.getByName(data.name, function(err, user) {
     // defer DB connection and other errors
