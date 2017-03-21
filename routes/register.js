@@ -8,7 +8,7 @@ exports.form = function(req, res) {
 exports.submit = function(req, res, next) {
   const data = req.body.user
   // check if user name is unique
-  User.getByName_old(data.name, function(err, user) {
+  User.getByName(data.name, function(err, user) {
     // defer DB connection and other errors
     if (err) return next(err)
     // Redis will default it
